@@ -1,7 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Arvo", serif;
     margin: 0;
 }
+
+/* inicio estilos de nav bar */
 .navbar {
     display: flex;
     justify-content: flex-end;
@@ -29,7 +31,7 @@ margin-right: auto;
     gap: 1rem;
     }
 .navbar .buttons button {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
     color: white;
     background-color: #444;
     border: none;
@@ -40,15 +42,78 @@ margin-right: auto;
 }
 .navbar .buttons button:nth-child(1){
     background-color: #009963;
-    border-radius:  5px; ;
+    border-radius:  20px; ;
 }
 .navbar .buttons button:hover:nth-child(1){
     background-color: #00b373;}
 
 .navbar .buttons button:nth-child(2){
     background-color:  #444;
-    border-radius:  5px; ;
+    border-radius:  20px; ;
 }
 .navbar .buttons button:hover:nth-child(2){
     background-color: #575757;
+}
+.navbar .buttons button:nth-child(3){
+    background-color:  #444;
+    border-radius:  20px; ;
+}
+
+.navbar .buttons button:hover:nth-child(3){
+    background-color: #575757;
+}
+/*final estilos nav bar */
+
+.accordion {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.accordion-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.accordion-item img {
+    width: 100%; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantén la proporción de las imágenes */
+    margin: 0 auto; /* Centra las imágenes horizontalmente */
+    display: block; /* Asegura que las imágenes sean elementos de bloque */
+    transition: transform 0.3s ease;
+}
+
+.accordion-item:hover img {
+    transform: scale(1.05); /* Añade un pequeño efecto de zoom al pasar el ratón */
+}
+
+.accordion-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.accordion-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.accordion-control.prev {
+    left: 0;
+}
+
+.accordion-control.next {
+    right: 0;
 }

@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart_checkout" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>Re-style</title>
 </head>
 
@@ -19,14 +25,56 @@
             <a href="#">Kids</a>
             <a href="#">Home</a>
             <a href="#">Sale</a>
-
         </div>
         <div class="buttons">
             <button>Search</button>
             <button>Sign In</button>
-            <button>Carrito</button>
+            <button type="button">
+                <span class="material-symbols-outlined">
+                    shopping_cart_checkout
+                </span>
+            </button>
         </div>
     </section>
+
+    <section class="accordion">
+        <div class="accordion-item">
+            <a href="#">
+                <img src="/img/img1.jpeg" alt="Image 1">
+                <div class="accordion-content">
+                    <h3>New Arrivals</h3>
+                </div>
+            </a>
+        </div>
+        <div class="accordion-item">
+            <a href="#">
+                <img src="/img/img2.jpeg" alt="Image 2">
+                <div class="accordion-content">
+                    <h3>Featured Brands</h3>
+                </div>
+            </a>
+        </div>
+        <div class="accordion-item">
+            <a href="#">
+                <img src="/img/img3.jpeg" alt="Image 3">
+                <div class="accordion-content">
+                    <h3>Trending Now</h3>
+                </div>
+            </a>
+        </div>
+        <div class="accordion-item">
+            <a href="#">
+                <img src="/img/img4.jpeg" alt="Image 4">
+                <div class="accordion-content">
+                    <h3>Summer Essentials</h3>
+                </div>
+            </a>
+        </div>
+        <button class="accordion-control prev" onclick="prevImage()">&#10094;</button>
+        <button class="accordion-control next" onclick="nextImage()">&#10095;</button>
+    </section>
+
+    <script src="accordion.js"></script>
 </body>
 
 </html>
